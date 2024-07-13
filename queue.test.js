@@ -8,18 +8,26 @@ describe('Queue', () => {
   })
 
   it('Deve ser capaz de calcular o tamanho da fila', () => {
-    // Seu código aqui
-  })
+    const fila = new Fila();
+    const tamanhoDaFila = fila.tamanho();
+    expect(tamanhoDaFila).toBe(3);
+  });
 
   it('Deve ser capaz de adicionar um item na fila', () => {
-   // Seu código aqui
-  })
+    const fila = new Fila();
+    fila.adicionar('item novo');
+    expect(fila.tamanho()).toBe(1);
+  });
 
   it('Deve escolher o primeiro item da fila', () => {
-    // Seu código aqui
-  })
+    const fila = new Fila();
+    const primeiroItem = fila.escolherPrimeiro();
+    expect(primeiroItem).toBe('Item 1');
+  });
 
   it('Deve remover o primeiro item da fila', () => {
-    // Seu código aqui
-  })
-})
+    const fila = new Fila();
+    fila.adicionar('Item 1');
+    const itemRemovido = fila.remover();  
+  });
+});
